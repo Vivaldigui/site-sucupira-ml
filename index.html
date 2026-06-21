@@ -54,6 +54,7 @@ function gtag_report_conversion(url) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="preload" as="image" href="assets/produto-sem-fundo.webp" type="image/webp" fetchpriority="high">
   <meta name="description" content="Sucupira Naturale — Extrato líquido de semente de sucupira branca. Alívio natural para artrite, artrose, coluna, joelho e ciático. Compre pelo Mercado Livre.">
   <title>Sucupira Naturale — Compre pelo Mercado Livre</title>
 
@@ -65,7 +66,7 @@ function gtag_report_conversion(url) {
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Pacifico&family=Roboto:wght@300;400;500;700;800;900&family=Montserrat:wght@400;500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Pacifico&family=Roboto:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     /* ============================================================
@@ -1465,7 +1466,7 @@ function gtag_report_conversion(url) {
 <div class="frete-banner">
   <span class="frete-line">
     🛡️ <strong>Compra segura</strong> pelo Mercado Livre
-    <img class="ml-top-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="Mercado Livre">
+    <img class="ml-top-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="Mercado Livre" width="22" height="22" decoding="async">
   </span>
   <span>🚚 Consulte o frete diretamente no anúncio</span>
 </div>
@@ -1501,10 +1502,14 @@ function gtag_report_conversion(url) {
       <!-- Garrafa principal (clicável → comprar) -->
       <a href="#comprar" class="hero-img-link hero-media">
         <img
-          src="assets/produto-sem-fundo.png"
+          src="assets/produto-sem-fundo.webp"
           alt="Sucupira Naturale — Extrato Líquido 400ml"
           class="hero-bottle-img"
-          onerror="this.src='assets/garrafa.png'"
+          width="434"
+          height="575"
+          decoding="async"
+          fetchpriority="high"
+          onerror="this.onerror=null;this.src='assets/produto-sem-fundo.png'"
         >
       </a>
 
@@ -1520,7 +1525,7 @@ function gtag_report_conversion(url) {
 
     <!-- Selo Reclame Aqui (empresa verificada) -->
     <div class="hero-ra-seal">
-      <div id="ra-verified-seal"><script type="text/javascript" id="ra-embed-verified-seal" src="https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js" data-id="WGh5blpwdS14RGZ5M0xNMTpzdWN1cGlyYS1uYXR1cmFsZQ==" data-target="ra-verified-seal" data-model="horizontal_1"></script></div>
+      <div id="ra-verified-seal"><script defer type="text/javascript" id="ra-embed-verified-seal" src="https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js" data-id="WGh5blpwdS14RGZ5M0xNMTpzdWN1cGlyYS1uYXR1cmFsZQ==" data-target="ra-verified-seal" data-model="horizontal_1"></script></div>
       </div>
 
   </div><!-- /hero-inner -->
@@ -1559,7 +1564,7 @@ function gtag_report_conversion(url) {
       <!-- Kit — Prevenção / Manutenção (4 garrafas) — MAIS VENDIDO -->
       <div class="kit-card featured" id="kit-prevencao">
         <div class="kit-badge-top">⭐ Mais Vendido</div>
-        <img src="assets/kit4.png" alt="Sucupira Naturale — 4 garrafas" class="kit-img" onerror="this.src='assets/garrafa.png'">
+        <img src="assets/kit4.webp" alt="Sucupira Naturale — 4 garrafas" class="kit-img" width="448" height="417" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/produto-sem-fundo.webp'">
         <p class="kit-phase">Prevenção e Manutenção</p>
         <div class="kit-duration">2 meses de tratamento</div>
         <span class="kit-qty">🧴 4 garrafas · 400 ml</span>
@@ -1568,7 +1573,7 @@ function gtag_report_conversion(url) {
         <div class="kit-price-per">R$&nbsp;37,00 cada garrafa</div>
         <div class="kit-cta">
           <a href="https://www.mercadolivre.com.br/4-sucupiras-naturale-liquida-400ml/up/MLBU3416238212" id="btn-prevencao" class="btn-green-flat">
-            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true">
+            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true" width="28" height="28" loading="lazy" decoding="async">
             <span>COMPRAR NO MERCADO LIVRE</span>
           </a>
           <p class="kit-hint">Compra segura pelo Mercado Livre</p>
@@ -1577,7 +1582,7 @@ function gtag_report_conversion(url) {
 
       <!-- Kit — Dor Mediana (3 garrafas) -->
       <div class="kit-card" id="kit-mediana">
-        <img src="assets/kit3.jpg" alt="Sucupira Naturale — 3 garrafas" class="kit-img" onerror="this.src='assets/garrafa.png'">
+        <img src="assets/kit3.webp" alt="Sucupira Naturale — 3 garrafas" class="kit-img" width="531" height="581" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/produto-sem-fundo.webp'">
         <p class="kit-phase">Dor Mediana</p>
         <div class="kit-duration">1 mês de tratamento</div>
         <span class="kit-qty">🧴 3 garrafas · 400 ml</span>
@@ -1586,7 +1591,7 @@ function gtag_report_conversion(url) {
         <div class="kit-price-per">R$&nbsp;45,00 cada garrafa</div>
         <div class="kit-cta">
           <a href="https://www.mercadolivre.com.br/3-sucupiras-naturale-liquida-400ml/up/MLBU3416238192" id="btn-mediana" class="btn-green-flat">
-            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true">
+            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true" width="28" height="28" loading="lazy" decoding="async">
             <span>COMPRAR NO MERCADO LIVRE</span>
           </a>
           <p class="kit-hint">Compra segura pelo Mercado Livre</p>
@@ -1595,7 +1600,7 @@ function gtag_report_conversion(url) {
 
       <!-- Kit — Dor Aguda / Crônica (6 garrafas) -->
       <div class="kit-card" id="kit-aguda">
-        <img src="assets/kit6.jpg" alt="Sucupira Naturale — 6 garrafas" class="kit-img" onerror="this.src='assets/garrafa.png'">
+        <img src="assets/kit6.webp" alt="Sucupira Naturale — 6 garrafas" class="kit-img" width="613" height="767" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/produto-sem-fundo.webp'">
         <p class="kit-phase">Dor Aguda ou Crônica</p>
         <div class="kit-duration">1 mês de tratamento</div>
         <span class="kit-qty">🧴 6 garrafas · 400 ml</span>
@@ -1604,7 +1609,7 @@ function gtag_report_conversion(url) {
         <div class="kit-price-per">R$&nbsp;31,67 cada garrafa · maior desconto</div>
         <div class="kit-cta">
           <a href="https://www.mercadolivre.com.br/6-sucupiras-naturale-liquida-400ml/up/MLBU3409707429" id="btn-aguda" class="btn-green-flat">
-            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true">
+            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true" width="28" height="28" loading="lazy" decoding="async">
             <span>COMPRAR NO MERCADO LIVRE</span>
           </a>
           <p class="kit-hint">Compra segura pelo Mercado Livre</p>
@@ -1613,7 +1618,7 @@ function gtag_report_conversion(url) {
 
       <!-- Kit — Tratamento Inicial (2 garrafas) -->
       <div class="kit-card" id="kit-2garrafas">
-        <img src="assets/kit2.webp" alt="Sucupira Naturale — 2 garrafas" class="kit-img" onerror="this.src='assets/garrafa.png'">
+        <img src="assets/kit2.webp" alt="Sucupira Naturale — 2 garrafas" class="kit-img" width="908" height="1200" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/produto-sem-fundo.webp'">
         <p class="kit-phase">Tratamento Inicial</p>
         <div class="kit-duration">1 mês de tratamento</div>
         <span class="kit-qty">🧴 2 garrafas · 400 ml</span>
@@ -1622,7 +1627,7 @@ function gtag_report_conversion(url) {
         <div class="kit-price-per">R$&nbsp;54,00 cada garrafa</div>
         <div class="kit-cta">
           <a href="https://www.mercadolivre.com.br/2-sucupiras-naturale-liquida-400ml/up/MLBU3416232728" id="btn-kit2" class="btn-green-flat">
-            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true">
+            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true" width="28" height="28" loading="lazy" decoding="async">
             <span>COMPRAR NO MERCADO LIVRE</span>
           </a>
           <p class="kit-hint">Compra segura pelo Mercado Livre</p>
@@ -1631,7 +1636,7 @@ function gtag_report_conversion(url) {
 
       <!-- Kit — Experimental / 1 garrafa -->
       <div class="kit-card" id="kit-1garrafa">
-        <img src="assets/kit1.jpg" alt="Sucupira Naturale — 1 garrafa" class="kit-img" onerror="this.src='assets/garrafa.png'">
+        <img src="assets/kit1.webp" alt="Sucupira Naturale — 1 garrafa" class="kit-img" width="489" height="796" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/produto-sem-fundo.webp'">
         <p class="kit-phase">Experimentar</p>
         <div class="kit-duration">~2 semanas de tratamento</div>
         <span class="kit-qty">🧴 1 garrafa · 400 ml</span>
@@ -1640,7 +1645,7 @@ function gtag_report_conversion(url) {
         <div class="kit-price-per">R$&nbsp;63,99 a garrafa</div>
         <div class="kit-cta">
           <a href="https://www.mercadolivre.com.br/1-sucupira-naturale-liquida-400ml/up/MLBU3416228056" id="btn-kit1" class="btn-green-flat">
-            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true">
+            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true" width="28" height="28" loading="lazy" decoding="async">
             <span>COMPRAR NO MERCADO LIVRE</span>
           </a>
           <p class="kit-hint">Compra segura pelo Mercado Livre</p>
@@ -1708,8 +1713,9 @@ function gtag_report_conversion(url) {
 <section class="produto-section">
   <div class="produto-inner">
 
-    <img src="assets/logo.png" alt="Sucupira Naturale" class="produto-logo"
-      onerror="this.style.display='none'">
+    <img src="assets/logo.webp" alt="Sucupira Naturale" class="produto-logo"
+         width="1024" height="1024" loading="lazy" decoding="async"
+         onerror="this.style.display='none'">
 
     <h2 class="produto-title">Sucupira Naturale ORIGINAL</h2>
 
@@ -1919,15 +1925,15 @@ function gtag_report_conversion(url) {
       <div class="trust-col-title">🔒 Site Seguro</div>
       <div class="trust-badges">
         <div class="trust-badge security-badge">
-          <img src="assets/icon-ssl.svg" alt="" aria-hidden="true">
+          <img src="assets/icon-ssl.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
           <span>SSL Certificado</span>
         </div>
         <div class="trust-badge security-badge">
-          <img src="assets/icon-compra-segura.svg" alt="" aria-hidden="true">
+          <img src="assets/icon-compra-segura.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
           <span>Compra Protegida</span>
         </div>
         <div class="trust-badge security-badge">
-          <img src="assets/icon-entrega.svg" alt="" aria-hidden="true">
+          <img src="assets/icon-entrega.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
           <span>Entrega Rastreada</span>
         </div>
       </div>
@@ -1939,11 +1945,11 @@ function gtag_report_conversion(url) {
     <div class="trust-col">
       <div class="trust-col-title">💳 Formas de Pagamento</div>
       <div class="trust-badges">
-        <div class="trust-badge payment-badge"><img src="assets/icon-visa.svg" alt="Visa"></div>
-        <div class="trust-badge payment-badge"><img src="assets/icon-mastercard.svg" alt="Mastercard"></div>
-        <div class="trust-badge payment-badge"><img src="assets/icon-americanexpress.svg" alt="American Express"></div>
-        <div class="trust-badge payment-badge"><img src="assets/icon-pix.svg" alt="Pix"></div>
-        <div class="trust-badge payment-badge boleto"><img src="assets/icon-boleto.svg" alt="Boleto"></div>
+        <div class="trust-badge payment-badge"><img src="assets/icon-visa.svg" alt="Visa" loading="lazy" decoding="async"></div>
+        <div class="trust-badge payment-badge"><img src="assets/icon-mastercard.svg" alt="Mastercard" loading="lazy" decoding="async"></div>
+        <div class="trust-badge payment-badge"><img src="assets/icon-americanexpress.svg" alt="American Express" loading="lazy" decoding="async"></div>
+        <div class="trust-badge payment-badge"><img src="assets/icon-pix.svg" alt="Pix" loading="lazy" decoding="async"></div>
+        <div class="trust-badge payment-badge boleto"><img src="assets/icon-boleto.svg" alt="Boleto" loading="lazy" decoding="async"></div>
       </div>
     </div>
 
@@ -1968,11 +1974,11 @@ function gtag_report_conversion(url) {
   </nav>
 
   <div class="footer-icons" aria-label="Formas de pagamento aceitas">
-    <span class="footer-icon-chip"><img src="assets/icon-visa.svg" alt="Visa"></span>
-    <span class="footer-icon-chip"><img src="assets/icon-mastercard.svg" alt="Mastercard"></span>
-    <span class="footer-icon-chip"><img src="assets/icon-americanexpress.svg" alt="American Express"></span>
-    <span class="footer-icon-chip"><img src="assets/icon-pix.svg" alt="Pix"></span>
-    <span class="footer-icon-chip footer-boleto"><img src="assets/icon-boleto.svg" alt="Boleto"></span>
+    <span class="footer-icon-chip"><img src="assets/icon-visa.svg" alt="Visa" loading="lazy" decoding="async"></span>
+    <span class="footer-icon-chip"><img src="assets/icon-mastercard.svg" alt="Mastercard" loading="lazy" decoding="async"></span>
+    <span class="footer-icon-chip"><img src="assets/icon-americanexpress.svg" alt="American Express" loading="lazy" decoding="async"></span>
+    <span class="footer-icon-chip"><img src="assets/icon-pix.svg" alt="Pix" loading="lazy" decoding="async"></span>
+    <span class="footer-icon-chip footer-boleto"><img src="assets/icon-boleto.svg" alt="Boleto" loading="lazy" decoding="async"></span>
   </div>
 
   <div class="footer-contact">
