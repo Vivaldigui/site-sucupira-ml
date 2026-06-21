@@ -530,10 +530,16 @@ function gtag_report_conversion(url) {
     }
 
     .kits-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
       gap: 20px;
+      padding: 24px 4px 16px;
+      scrollbar-width: none;
     }
+    .kits-grid::-webkit-scrollbar { display: none; }
     .kit-card {
       background: #fff;
       border: 2px solid #e0e0e0;
@@ -542,6 +548,8 @@ function gtag_report_conversion(url) {
       text-align: center;
       display: flex;
       flex-direction: column;
+      flex: 0 0 calc((100% - 60px) / 4);
+      scroll-snap-align: start;
       position: relative;
     }
     .kit-card.featured {
@@ -657,7 +665,7 @@ function gtag_report_conversion(url) {
     /* Setas do carrossel de kits */
     .kits-carousel-wrap { position: relative; }
     .kit-arrow {
-      display: none;
+      display: flex;
       position: absolute;
       top: 30%;
       transform: translateY(-50%);
@@ -681,9 +689,6 @@ function gtag_report_conversion(url) {
     .kit-arrow:active { transform: translateY(-50%) scale(0.93); }
     .kit-arrow-prev { left: -4px; }
     .kit-arrow-next { right: -4px; }
-    @media (max-width: 767px) {
-      .kit-arrow { display: flex; }
-    }
     .kit-img {
       width: 100%;
       max-width: 190px;
@@ -1606,6 +1611,24 @@ function gtag_report_conversion(url) {
         </div>
       </div>
 
+      <!-- Kit — Tratamento Inicial (2 garrafas) -->
+      <div class="kit-card" id="kit-2garrafas">
+        <img src="assets/kit2.webp" alt="Sucupira Naturale — 2 garrafas" class="kit-img" onerror="this.src='assets/garrafa.png'">
+        <p class="kit-phase">Tratamento Inicial</p>
+        <div class="kit-duration">1 mês de tratamento</div>
+        <span class="kit-qty">🧴 2 garrafas · 400 ml</span>
+        <p class="kit-dose">3 tampinhas ao dia</p>
+        <div class="kit-price">R$&nbsp;107,99</div>
+        <div class="kit-price-per">R$&nbsp;54,00 cada garrafa</div>
+        <div class="kit-cta">
+          <a href="https://www.mercadolivre.com.br/2-sucupiras-naturale-liquida-400ml/up/MLBU3416232728" id="btn-kit2" class="btn-green-flat">
+            <img class="ml-icon" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/favicon.svg" alt="" aria-hidden="true">
+            <span>COMPRAR NO MERCADO LIVRE</span>
+          </a>
+          <p class="kit-hint">Compra segura pelo Mercado Livre</p>
+        </div>
+      </div>
+
       <!-- Kit — Experimental / 1 garrafa -->
       <div class="kit-card" id="kit-1garrafa">
         <img src="assets/kit1.jpg" alt="Sucupira Naturale — 1 garrafa" class="kit-img" onerror="this.src='assets/garrafa.png'">
@@ -1996,6 +2019,7 @@ function gtag_report_conversion(url) {
     // Anúncios oficiais de cada kit no Mercado Livre
     anuncios: {
       kit1:      "https://www.mercadolivre.com.br/1-sucupira-naturale-liquida-400ml/up/MLBU3416228056", // 1 garrafa
+      kit2:      "https://www.mercadolivre.com.br/2-sucupiras-naturale-liquida-400ml/up/MLBU3416232728", // 2 garrafas
       mediana:   "https://www.mercadolivre.com.br/3-sucupiras-naturale-liquida-400ml/up/MLBU3416238192", // 3 garrafas
       prevencao: "https://www.mercadolivre.com.br/4-sucupiras-naturale-liquida-400ml/up/MLBU3416238212", // 4 garrafas
       aguda:     "https://www.mercadolivre.com.br/6-sucupiras-naturale-liquida-400ml/up/MLBU3409707429" // 6 garrafas
@@ -2007,6 +2031,7 @@ function gtag_report_conversion(url) {
   // Links internos como href="#comprar" nao passam por este mapa e nao contam conversao.
   const linksCompra = {
     "btn-kit1":      CFG.anuncios.kit1,
+    "btn-kit2":      CFG.anuncios.kit2,
     "btn-mediana":   CFG.anuncios.mediana,
     "btn-aguda":     CFG.anuncios.aguda,
     "btn-prevencao": CFG.anuncios.prevencao
